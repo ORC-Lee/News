@@ -68,6 +68,11 @@ function getAdminMenuActive($navc){
     return null;
 }
 
+/**
+ * 返回符合kindEditor格式的JSON数据
+ * @param $status
+ * @param $data
+ */
 function showKind($status, $data){
     header("Content-type:application/json;charset=UTF-8");
     if (0 == $status){
@@ -75,4 +80,12 @@ function showKind($status, $data){
         exit(json_encode(array("error"=>0, "url"=>$data)));
     }
     exit(json_encode(array("error"=>1, "message"=>"上传失败")));
+}
+
+/**
+ * 取得登录用户名
+ * @return string
+ */
+function getLoginUsername(){
+    return $_SESSION["adminUser"]["username"] ? $_SESSION["adminUser"]["username"] : null;
 }
