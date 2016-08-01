@@ -13,7 +13,7 @@
 
           <ol class="breadcrumb">
             <li>
-              <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=content">文章管理</a>
+              <i class="fa fa-dashboard"></i>  <a href="admin.php?c=content">文章管理</a>
             </li>
             <li class="active">
               <i class="fa fa-table"></i>文章列表
@@ -27,15 +27,15 @@
       </div>
       <br/>
       <div class="row">
-        <form action="/admin.php" method="get">
+        <form action="admin.php" method="get">
           <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon">栏目</span>
               <select class="form-control" name="catid">
                 <option value='' >全部分类</option>
-                
-                <option value="" ></option>
-                
+                <volist name="menus" id="menu">
+                  <option value="{$menu.menu_id}">{$menu.name}</option>
+                </volist>
               </select>
             </div>
           </div>
@@ -72,34 +72,32 @@
                 </tr>
                 </thead>
                 <tbody>
-                
+                <volist name="news" id="iNews">
                   <tr>
                     <td><input type="checkbox" name="pushcheck" value="{$new.news_id}"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      
-                    </td>
-                    <td></td>
-                    <td><span  attr-status=""  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ></span></td>
-                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                      <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                    <td>{$iNews.news_id}</td>
+                    <td>{$iNews.title}</td>
+                    <td>{$iNews.catid|getCatName=$menus,###}</td>
+                    <td>{$iNews.copyfrom|getCopyFromById}</td>
+                    <td>{$iNews.thumb|isThumb}</td>
+                    <td>{$iNews.create_time|date="Y-m-d H:i",###}</td>
+                    <td><span  attr-status="<if condition='$iNews.status eq 1'>0<else/>1</if>"  attr-id="{$iNews.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$iNews.status|getMenuStatus}</span></td>
+                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$iNews.news_id}" ></span>
+                      <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$iNews.news_id}"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
 
                     </td>
                   </tr>
-                
+                </volist>
 
                 </tbody>
               </table>
               <nav>
 
               <ul >
-                
+                {$pageRes}
               </ul>
 
             </nav>
@@ -126,10 +124,12 @@
   var SCOPE = {
     'edit_url' : 'admin.php?c=content&a=edit',
     'add_url' : 'admin.php?c=content&a=add',
+    'delete_url' : 'admin.php?c=content&a=delete',
+    'jump_url' : 'admin.php?c=content',
     'set_status_url' : 'admin.php?c=content&a=setStatus',
     'sing_news_view_url' : 'index.php?c=view',
     'listorder_url' : 'admin.php?c=content&a=listorder',
-    'push_url' : 'admin.php?c=content&a=push',
+    'push_url' : 'admin.php?c=content&a=push'
   }
 </script>
 <include file="Index/footer" />

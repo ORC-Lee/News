@@ -94,7 +94,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=menu">菜单管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-edit"></i> 添加

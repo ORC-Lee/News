@@ -62,8 +62,43 @@ function todelete (url, id){
             dialog.error(result.message);
         }else if(1 == result.status){
             //成功
-            var url = "admin.php?c=menu";
+            var url = SCOPE.jump_url;
             dialog.success(result.message,url);
+        }
+    },"JSON");
+}
+
+/**
+ * 修改状态
+ */
+$(".singcms-table #singcms-on-off").click(function(){
+    var id = $(this).attr("attr-id");
+    var url = SCOPE.set_status_url;
+    var status = $(this).attr("attr-status");
+
+    data = {};
+    data["id"] = id;
+    data["status"] = status;
+
+    layer.open({
+        content : "确定更改状态？",
+        btn : ["确认","取消"],
+        icon : 3,
+        yes : function () {
+            toSetStauts(url, data);
+        }
+    });
+});
+
+function toSetStauts(url, data){
+    $.post(url, data, function(result){
+        if (0 == result.status){
+            //失败
+            dialog.error(result.message);
+        }else{
+            //成功
+            var url = SCOPE.jump_url;
+            dialog.success(result.message, url);
         }
     },"JSON");
 }

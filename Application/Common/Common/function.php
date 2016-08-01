@@ -89,3 +89,35 @@ function showKind($status, $data){
 function getLoginUsername(){
     return $_SESSION["adminUser"]["username"] ? $_SESSION["adminUser"]["username"] : null;
 }
+
+/**
+ * 根据菜单Id取菜单名
+ * @param $menus
+ * @param $catId
+ * @return null
+ */
+function getCatName($menus, $catId){
+    foreach ($menus as $value) {
+        $arr[$value["menu_id"]] = $value["name"];
+    }
+    return isset($arr[$catId]) ? $arr[$catId] : null;
+}
+
+/**
+ * 取得文章来源
+ * @param $copyFrom
+ * @return string
+ */
+function getCopyFromById($id){
+    $arr = C("COPY_FROM");
+    return $arr[$id] ? $arr[$id]: null;
+}
+
+/**
+ * 判断是否有缩图
+ * @param $thumb
+ * @return string
+ */
+function isThumb($thumb){
+    return $thumb ? "<span style='color:red'>有</span>" : "无";
+}

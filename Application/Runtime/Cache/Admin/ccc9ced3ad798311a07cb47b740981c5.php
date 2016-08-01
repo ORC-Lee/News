@@ -91,7 +91,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
 
           <ol class="breadcrumb">
             <li>
-              <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=content">文章管理</a>
+              <i class="fa fa-dashboard"></i>  <a href="admin.php?c=content">文章管理</a>
             </li>
             <li class="active">
               <i class="fa fa-table"></i>文章列表
@@ -105,15 +105,13 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
       </div>
       <br/>
       <div class="row">
-        <form action="/admin.php" method="get">
+        <form action="admin.php" method="get">
           <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon">栏目</span>
               <select class="form-control" name="catid">
                 <option value='' >全部分类</option>
-                
-                <option value="" ></option>
-                
+                <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><option value="<?php echo ($menu["menu_id"]); ?>"><?php echo ($menu["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
               </select>
             </div>
           </div>
@@ -150,34 +148,30 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
                 </tr>
                 </thead>
                 <tbody>
-                
-                  <tr>
+                <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$iNews): $mod = ($i % 2 );++$i;?><tr>
                     <td><input type="checkbox" name="pushcheck" value="<?php echo ($new["news_id"]); ?>"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      
-                    </td>
-                    <td></td>
-                    <td><span  attr-status=""  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ></span></td>
-                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                      <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                    <td><?php echo ($iNews["news_id"]); ?></td>
+                    <td><?php echo ($iNews["title"]); ?></td>
+                    <td><?php echo (getCatName($menus,$iNews["catid"])); ?></td>
+                    <td><?php echo (getCopyFromById($iNews["copyfrom"])); ?></td>
+                    <td><?php echo (isThumb($iNews["thumb"])); ?></td>
+                    <td><?php echo (date("Y-m-d H:i",$iNews["create_time"])); ?></td>
+                    <td><span  attr-status="<?php if($iNews["status"] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($iNews["news_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getMenuStatus($iNews["status"])); ?></span></td>
+                    <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($iNews["news_id"]); ?>" ></span>
+                      <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($iNews["news_id"]); ?>"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
 
                     </td>
-                  </tr>
-                
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                 </tbody>
               </table>
               <nav>
 
               <ul >
-                
+                <?php echo ($pageRes); ?>
               </ul>
 
             </nav>
@@ -204,10 +198,12 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
   var SCOPE = {
     'edit_url' : 'admin.php?c=content&a=edit',
     'add_url' : 'admin.php?c=content&a=add',
+    'delete_url' : 'admin.php?c=content&a=delete',
+    'jump_url' : 'admin.php?c=content',
     'set_status_url' : 'admin.php?c=content&a=setStatus',
     'sing_news_view_url' : 'index.php?c=view',
     'listorder_url' : 'admin.php?c=content&a=listorder',
-    'push_url' : 'admin.php?c=content&a=push',
+    'push_url' : 'admin.php?c=content&a=push'
   }
 </script>
 <script src="Public/js/admin/common.js"></script>
