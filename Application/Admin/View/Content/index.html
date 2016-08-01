@@ -50,6 +50,19 @@
             </div>
           </div>
         </form>
+        <div class="col-md-3">
+          <div class="input-group">
+            <select class="form-control" name="position_id" id="select_push">
+              <option value="0">==请选择推荐位==</option>
+              <foreach name="positions" item="position">
+                <option value="{$position.id}">{$position.name}</option>
+              </foreach>
+            </select>
+            <span class="input-group-btn">
+              <button id="singcms-push" type="button" class="btn btn-primary">推送</button>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-6">
@@ -74,7 +87,7 @@
                 <tbody>
                 <volist name="news" id="iNews">
                   <tr>
-                    <td><input type="checkbox" name="pushcheck" value="{$new.news_id}"></td>
+                    <td><input type="checkbox" name="pushcheck" value="{$iNews.news_id}"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
                     <td>{$iNews.news_id}</td>
                     <td>{$iNews.title}</td>
@@ -95,15 +108,12 @@
                 </tbody>
               </table>
               <nav>
-
-              <ul >
-                {$pageRes}
-              </ul>
-
-            </nav>
-              
+                <!--<ul>-->
+                  {$pageRes}
+                <!--</ul>-->
+              </nav>
+              <br/>
             </form>
-
           </div>
         </div>
 

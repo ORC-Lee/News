@@ -17,7 +17,7 @@ class ContentController extends CommonController
         }
 
         $page = $_REQUEST["p"] ? $_REQUEST["p"] : 1;
-        $pageSize = $_REQUEST["pageSize"] ? $_REQUEST["pageSize"] : 1;
+        $pageSize = $_REQUEST["pageSize"] ? $_REQUEST["pageSize"] : 2;
         $totalRows = D("News")->getNewsCount($where);
         $news = D("News")->getNews($page, $pageSize, $where);
         $menus = D("Menu")->getBarMenus();
@@ -25,9 +25,12 @@ class ContentController extends CommonController
         $res = new \Think\Page($totalRows, $pageSize);
         $pageRes = $res->show();
 
+        $positions = D("Position")->getNormalPositions();
+
         $this->assign("pageRes", $pageRes);
         $this->assign("news", $news);
         $this->assign("menus", $menus);
+        $this->assign("positions", $positions);
 
         $this->display();
     }
@@ -54,9 +57,9 @@ class ContentController extends CommonController
                 unset($_POST["news_id"]);
                 $this->save($id, $_POST);
             }
-            $indertId = D("News")->insert($_POST);
-            if ($indertId){
-                $newsContentData["news_id"] = $indertId;
+            $insertId = D("News")->insert($_POST);
+            if ($insertId){
+                $newsContentData["news_id"] = $insertId;
                 $newsContentData["content"] = $_POST["content"];
                 $cInsertId = D("NewsContent")->insert($newsContentData);
                 if ($cInsertId){

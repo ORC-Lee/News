@@ -42,7 +42,7 @@
 <div id="wrapper">
 
   <?php
-$navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
+$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,7 +55,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $username?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
           <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
@@ -126,6 +126,17 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
             </div>
           </div>
         </form>
+        <div class="col-md-3">
+          <div class="input-group">
+            <select class="form-control" name="position_id" id="select_push">
+              <option value="0">==请选择推荐位==</option>
+              <?php if(is_array($positions)): foreach($positions as $key=>$position): ?><option value="<?php echo ($position["id"]); ?>"><?php echo ($position["name"]); ?></option><?php endforeach; endif; ?>
+            </select>
+            <span class="input-group-btn">
+              <button id="singcms-push" type="button" class="btn btn-primary">推送</button>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-6">
@@ -149,7 +160,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
                 </thead>
                 <tbody>
                 <?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$iNews): $mod = ($i % 2 );++$i;?><tr>
-                    <td><input type="checkbox" name="pushcheck" value="<?php echo ($new["news_id"]); ?>"></td>
+                    <td><input type="checkbox" name="pushcheck" value="<?php echo ($iNews["news_id"]); ?>"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
                     <td><?php echo ($iNews["news_id"]); ?></td>
                     <td><?php echo ($iNews["title"]); ?></td>
@@ -169,15 +180,12 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
                 </tbody>
               </table>
               <nav>
-
-              <ul >
-                <?php echo ($pageRes); ?>
-              </ul>
-
-            </nav>
-              
+                <!--<ul>-->
+                  <?php echo ($pageRes); ?>
+                <!--</ul>-->
+              </nav>
+              <br/>
             </form>
-
           </div>
         </div>
 

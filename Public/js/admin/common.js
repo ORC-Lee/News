@@ -102,3 +102,7 @@ function toSetStauts(url, data){
         }
     },"JSON");
 }
+
+/**
+ * 推送
+ */
