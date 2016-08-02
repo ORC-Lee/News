@@ -16,7 +16,7 @@
 						<i class="fa fa-dashboard"></i>  <a href="admin.php?c=PositionContent">推荐位内容管理</a>
 					</li>
 					<li class="active">
-						<i class="fa fa-edit"></i> 添加推荐位内容
+						<i class="fa fa-edit"></i> 编辑推荐位内容
 					</li>
 				</ol>
 			</div>
@@ -30,7 +30,7 @@
 					<div class="form-group">
 						<label for="inputname" class="col-sm-2 control-label">标题:</label>
 						<div class="col-sm-5">
-							<input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题">
+							<input type="text" name="title" class="form-control" id="inputname" placeholder="请填写标题" value="{$posContent.title}">
 						</div>
 					</div>
 					<div class="form-group">
@@ -39,7 +39,7 @@
 							<select class="form-control" name="position_id">
 								<option value="">==请选择推荐位==</option>
 								<foreach name="poss" item="pos">
-									<option value="{$pos.id}">{$pos.name}</option>
+									<option value="{$pos.id}" <if condition="$pos.id eq $posContent['position_id']">selected="selected"</if> > {$pos.name}</option>
 								</foreach>
 							</select>
 						</div>
@@ -49,35 +49,35 @@
 						<label for="inputname" class="col-sm-2 control-label">缩图:</label>
 						<div class="col-sm-5">
 							<input id="file_upload"  type="file" multiple="true" >
-							<img style="display: none" id="upload_org_code_img" src="" width="150" height="150">
-							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+							<img style="display: none" id="upload_org_code_img" src="{$posContent.thumb}" width="150" height="150">
+							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="{$posContent.id}">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">url:</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址">
+							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址" value="{$posContent.url}">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputname" class="col-sm-2 control-label">文章id:</label>
 						<div class="col-sm-5">
-							<input type="text" name="news_id" class="form-control" id="inputname" placeholder="如果和文章无关联的可以不添加文章id">
+							<input type="text" name="news_id" class="form-control" id="inputname" placeholder="如果和文章无关联的可以不添加文章id" value="{$posContent.news_id}">
 						</div>
 					</div>
 					<div class="form-group">
 					<label for="inputPassword3" class="col-sm-2 control-label">状态:</label>
 					<div class="col-sm-5">
-						<input type="radio" name="status" id="optionsRadiosInline1" value="1" checked> 开启
-						<input type="radio" name="status" id="optionsRadiosInline2" value="0"> 关闭
+						<input type="radio" name="status" id="optionsRadiosInline1" value="1" <if condition="$posContent.status eq 1">checked</if>> 开启
+						<input type="radio" name="status" id="optionsRadiosInline2" value="0" <if condition="$posContent.status eq 0">checked</if>> 关闭
 					</div>
 
 				</div>
-
+					<input type="hidden" name="id" value="{$posContent.id}">
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
-							<button type="button" class="btn btn-default" id="singcms-button-submit">添加</button>
+							<button type="button" class="btn btn-default" id="singcms-button-submit">更新</button>
 						</div>
 					</div>
 				</form>
@@ -101,6 +101,12 @@
 		'ajax_upload_image_url' : 'admin.php?c=image&a=ajaxuploadimage',
 		'ajax_upload_swf' : 'Public/js/party/uploadify.swf'
 	};
+</script>
+<script>
+	var thumb = "{$posContent.thumb}";
+	if (thumb) {
+		$("#upload_org_code_img").show();
+	}
 </script>
 <!-- /#wrapper -->
 <script type="text/javascript" src="/Public/js/admin/form.js"></script>

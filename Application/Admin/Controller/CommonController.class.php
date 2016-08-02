@@ -53,4 +53,27 @@ class CommonController extends Controller
     }
 
 
+    /**
+     * 设置状态值
+     * @param $data
+     * @param $model
+     */
+    public function setStatus($data, $model)
+    {
+        try {
+            if ($data) {
+                $jumpUrl = $_SERVER["HTTP_REFERER"];
+                $id = $data["id"];
+                $status = $data["status"];
+                $res = D($model)->setStatusById($id, $status);
+                if (false == $res) {
+                    return show(0, "修改状态失败");
+                }
+            }
+            return show(1, "修改状态成功", array("jump_url" => $jumpUrl));
+        } catch (Exception $e) {
+            return show(0, $e->getMessage());
+        }
+    }
+
 }

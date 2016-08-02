@@ -97,8 +97,8 @@ function toSetStauts(url, data){
             dialog.error(result.message);
         }else{
             //成功
-            var url = SCOPE.jump_url;
-            dialog.success(result.message, url);
+            //var url = SCOPE.jump_url;
+            dialog.success(result.message, result["data"]["jump_url"]);
         }
     },"JSON");
 }
@@ -106,3 +106,28 @@ function toSetStauts(url, data){
 /**
  * 推送
  */
+$("#singcms-push").click(function (){
+    var position_id = $("#select_push").val();
+    if (0 == position_id){
+        dialog.error("请选择推荐位");
+    }
+    var push = {};
+    $("input[name='pushcheck']:checked").each(function (i){
+        push[i] = $(this).val();
+    });
+    var postData = {};
+    postData["position_id"] = position_id;
+    postData["push"] = push;
+
+    var url = SCOPE.push_url;
+    $.post(url, postData, function(result){
+        if (0 == result.status){
+            //失败
+            return dialog.error(result.message);
+        }
+        if (1 == result.status){
+            //成功
+            return dialog.success(result.message, result["data"]["jump_url"]);
+        }
+    },"JSON");
+})

@@ -1,5 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,7 +39,6 @@
 
 
 <body>
-
 <div id="wrapper">
 
     <?php
@@ -83,8 +81,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
   </div>
   <!-- /.navbar-collapse -->
 </nav>
-
-    <div id="page-wrapper">
+<div id="page-wrapper">
 
     <div class="container-fluid" >
 
@@ -94,40 +91,43 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=PositionContent">推荐位内容管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-table">菜单列表</i>
+                        <i class="fa fa-table">推荐位内容列表</i>
                     </li>
                 </ol>
             </div>
         </div>
         <!-- /.row -->
+        <div >
+            <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+        </div>
+        <br/>
         <div class="row">
             <form action="admin.php" method="get">
-
-                <div class="input-group">
-                    <span class="input-group-addon">类型</span>
-                    <select class="form-control" name="type">
-                        <option value='' >请选择类型</option>
-
-                        <option value="1" <?php if($type == 1): ?>selected="selected"<?php endif; ?>>后台菜单</option>
-                        <option value="0" <?php if($type == 0): ?>selected="selected"<?php endif; ?>>前端栏目</option>
-                    </select>
-
-
-                <input type="hidden" name="c" value="menu"/>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">推荐位</span>
+                        <select class="form-control" name="position_id">
+                            <option value="">全部推荐位</option>
+                            <?php if(is_array($positions)): $i = 0; $__LIST__ = $positions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$position): $mod = ($i % 2 );++$i;?><option value="<?php echo ($position["id"]); ?>" <?php if($position["id"] == $positionId): ?>selected="selected"<?php endif; ?>><?php echo ($position["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden" name="c" value="PositionContent"/>
                 <input type="hidden" name="a" value="index"/>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <input class="form-control" name="title" type="text" value="<?php echo ($title); ?>" placeholder="文章标题" />
                 <span class="input-group-btn">
                   <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
                 </span>
+                    </div>
                 </div>
             </form>
         </div>
-        <br/>
-        <div>
-          <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
-        </div>
+
         <div class="row">
             <div class="col-lg-6">
                 <h3></h3>
@@ -136,44 +136,44 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                     <table class="table table-bordered table-hover singcms-table">
                         <thead>
                         <tr>
-                            <!--<th width="14">排序</th>-->
+                            <!--<th width="14">排序</th>&lt;!&ndash;7&ndash;&gt;-->
                             <th>id</th>
-                            <th>菜单名</th>
-                            <th>模块名</th>
-                            <th>类型</th>
+                            <th>标题</th>
+                            <th>时间</th>
+                            <th>封面图</th>
                             <th>状态</th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><tr>
-                                <!--<td><input size="4" type="text" name="" value=""/></td>-->
-                                <td><?php echo ($menu["menu_id"]); ?></td>
-                                <td><?php echo ($menu["name"]); ?></td>
-                                <td><?php echo ($menu["m"]); ?></td>
-                                <td><?php echo (getMenuType($menu["type"])); ?></td>
+                        <?php if(is_array($posContents)): foreach($posContents as $key=>$posContent): ?><tr>
+                                <!--<td><input size=4 type='text'  name='' value=""/></td>-->
+                                <td><?php echo ($posContent["id"]); ?></td>
+                                <td><?php echo ($posContent["title"]); ?></td>
+                                <td><?php echo (date("Y-m-d H:i",$posContent["create_time"])); ?></td>
+                                <td><?php echo (isThumb($posContent["thumb"])); ?></td>
                                 <td>
-                                    <span  attr-status="<?php if($menu["status"] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($menu["menu_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getMenuStatus($menu["status"])); ?></span>
+                                    <span  attr-status="<?php if($posContent["status"] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($posContent["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getMenuStatus($posContent["status"])); ?></span>
                                 </td>
                                 <td>
-                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($menu["menu_id"]); ?>"></span>
-                                    <a href="javascript:void(0)" attr-id="<?php echo ($menu["menu_id"]); ?>" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
-                                    </span>
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($posContent["id"]); ?>" ></span>
+                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($posContent["id"]); ?>"  attr-message="删除">
+                                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                     </a>
                                 </td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
+                            </tr><?php endforeach; endif; ?>
                         </tbody>
                     </table>
                     </form>
-                    <nav>
-                        <ul class="pagination"><?php echo ($pageResult); ?></ul>
-                    </nav>
+                    <!--<div>-->
+                        <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
+                    <!--</div>-->
                 </div>
             </div>
 
         </div>
         <!-- /.row -->
+        <?php echo ($poss); ?>
 
     </div>
     <!-- /.container-fluid -->
@@ -183,18 +183,17 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
 </div>
 <!-- /#wrapper -->
-<!-- Morris Charts JavaScript -->
 <script>
-
     var SCOPE = {
-        'add_url' : 'admin.php?c=menu&a=add',
-        'set_status_url' : 'admin.php?c=menu&a=setStatus',
-        'edit_url': 'admin.php?c=menu&a=edit',
-        'delete_url': 'admin.php?c=menu&a=delete',
-        'jump_url' : 'admin.php?c=menu',
+        'edit_url' : 'admin.php?c=PositionContent&a=edit',
+        'set_status_url' : 'admin.php?c=PositionContent&a=setStatus',
+        'add_url' : 'admin.php?c=PositionContent&a=add',
+        'delete_url' : 'admin.php?c=PositionContent&a=delete',
+        'jump_url' : 'admin.php?c=PositionContent',
+        'listorder_url' : 'admin.php?c=PositionContent&a=listorder',
     }
+
 </script>
-</body>
 <script src="Public/js/admin/common.js"></script>
 
 

@@ -103,4 +103,21 @@ class MenuModel extends Model
     public function getBarMenus(){
         return $this->_db->where("type=0")->order("menu_id asc")->select();
     }
+
+    /**
+     * 修改状态值
+     * @param $id
+     * @param $status
+     * @return bool
+     */
+    public function setStatusById($id, $status){
+        if (!$id || !is_numeric($id)){
+            throw_exception("id不合法");
+        }
+        if (!is_numeric($status)){
+            throw_exception("状态值不合法");
+        }
+        $data["status"] = $status;
+        return $this->_db->where("menu_id=".$id)->save($data);
+    }
 }

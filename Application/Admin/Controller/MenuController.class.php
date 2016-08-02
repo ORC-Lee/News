@@ -95,4 +95,13 @@ class MenuController extends CommonController
             show(0, $e->getMessage());
         }
     }
+
+    public function setStatus()
+    {
+        $data = array(
+          "id" => $_POST["id"],
+          "status" => $_POST["status"]
+        );
+        return parent::setStatus($data, "Menu");
+    }
 }

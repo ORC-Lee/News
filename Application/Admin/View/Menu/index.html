@@ -19,7 +19,7 @@
                         <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-table"></i>
+                        <i class="fa fa-table">菜单列表</i>
                     </li>
                 </ol>
             </div>
@@ -75,8 +75,15 @@
                                 <td>{$menu.name}</td>
                                 <td>{$menu.m}</td>
                                 <td>{$menu.type|getMenuType}</td>
-                                <td>{$menu.status|getMenuStatus}</td>
-                                <td><span class="glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$menu.menu_id}"></span>    <a href="javascript:void(0)" attr-id="{$menu.menu_id}" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
+                                <td>
+                                    <span  attr-status="<if condition='$menu.status eq 1'>0<else/>1</if>"  attr-id="{$menu.menu_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$menu.status|getMenuStatus}</span>
+                                </td>
+                                <td>
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$menu.menu_id}"></span>
+                                    <a href="javascript:void(0)" attr-id="{$menu.menu_id}" id="singcms-delete"  attr-a="menu" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true">
+                                    </span>
+                                    </a>
+                                </td>
                             </tr>
                         </volist>
 
@@ -105,6 +112,7 @@
 
     var SCOPE = {
         'add_url' : 'admin.php?c=menu&a=add',
+        'set_status_url' : 'admin.php?c=menu&a=setStatus',
         'edit_url': 'admin.php?c=menu&a=edit',
         'delete_url': 'admin.php?c=menu&a=delete',
         'jump_url' : 'admin.php?c=menu',

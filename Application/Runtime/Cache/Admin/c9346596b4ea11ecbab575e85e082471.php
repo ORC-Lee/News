@@ -42,7 +42,7 @@
 <div id="wrapper">
 
   <?php
-$navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
+$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,7 +55,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
     
     
     <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $username?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
           <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
@@ -178,7 +178,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; ?>
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                <button type="button" class="btn btn-default" id="singcms-button-submit">更新</button>
               </div>
             </div>
           </form>

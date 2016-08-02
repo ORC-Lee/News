@@ -88,4 +88,12 @@ class NewsModel extends Model
         $data["status"] = $status;
         return $this->_db->where("news_id=".$id)->save($data);
     }
+
+    public function getNewsByNewsIdIn($push){
+        if (!isset($push) || !is_array($push)){
+            throw_exception("推送内容不合法");
+        }
+        $where["news_id"] = array("in", implode(",", $push));
+        return $this->_db->where($where)->select();
+    }
 }
