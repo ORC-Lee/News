@@ -1,0 +1,109 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+    <include file="Index/nav"/>
+<div id="page-wrapper">
+
+    <div class="container-fluid" >
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+
+                <ol class="breadcrumb">
+                    <li>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=PositionContent">推荐位管理</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa fa-table">推荐位列表</i>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div >
+            <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+        </div>
+        <br/>
+        <div class="row">
+            <form action="admin.php" method="get">
+                <input type="hidden" name="c" value="Position"/>
+                <input type="hidden" name="a" value="index"/>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <input class="form-control" name="title" type="text" value="{$title}" placeholder="推荐位" />
+                <span class="input-group-btn">
+                  <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3></h3>
+                <div class="table-responsive">
+                    <form id="singcms-listorder">
+                    <table class="table table-bordered table-hover singcms-table">
+                        <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>推荐位名</th>
+                            <th>描述</th>
+                            <th>时间</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <foreach name="positions" item="position">
+                            <tr>
+                                <td>{$position.id}</td>
+                                <td>{$position.name}</td>
+                                <td>{$position.description}</td>
+                                <td>{$position.create_time|date="Y-m-d H:i",###}</td>
+                                <td>
+                                    <span  attr-status="<if condition='$position.status eq 1'>-1<else/>1</if>"  attr-id="{$position.id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$position.status|getMenuStatus}</span>
+                                </td>
+                                <td>
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
+                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </foreach>
+                        </tbody>
+                    </table>
+                    </form>
+                    <!--<div>-->
+                        <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
+                    <!--</div>-->
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        {$pageRes}
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<script>
+    var SCOPE = {
+        'edit_url' : 'admin.php?c=Position&a=edit',
+        'set_status_url' : 'admin.php?c=Position&a=setStatus',
+        'add_url' : 'admin.php?c=Position&a=add',
+        'delete_url' : 'admin.php?c=Position&a=delete',
+        'jump_url' : 'admin.php?c=Position',
+    }
+
+</script>
+<include file="Index/footer" />

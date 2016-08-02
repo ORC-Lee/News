@@ -39,7 +39,13 @@ function getMenuType($type){
  * @return string
  */
 function getMenuStatus($status){
-    return $status ? "开启" : "关闭";
+    //return $status ? "开启" : "关闭";
+    //这种写法为了照顾推荐位的状态值
+    if (1 == $status){
+        return "开启";
+    }else{
+        return "关闭";
+    }
 }
 
 /**
