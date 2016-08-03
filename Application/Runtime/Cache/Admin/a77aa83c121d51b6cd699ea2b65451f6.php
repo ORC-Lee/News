@@ -97,7 +97,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                         <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-edit"></i> 编辑
+                        <i class="fa fa-edit"></i> 编辑菜单
                     </li>
                 </ol>
             </div>

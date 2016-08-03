@@ -126,7 +126,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 						<div class="col-sm-5">
 							<input id="file_upload"  type="file" multiple="true" >
 							<img style="display: none" id="upload_org_code_img" src="<?php echo ($posContent["thumb"]); ?>" width="150" height="150">
-							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="<?php echo ($posContent["id"]); ?>">
+							<input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="<?php echo ($posContent["thumb"]); ?>">
 						</div>
 					</div>
 

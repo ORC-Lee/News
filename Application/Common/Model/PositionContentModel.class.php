@@ -56,8 +56,7 @@ class PositionContentModel extends Model
         if (!is_numeric($id) || !$id){
             throw_exception("id不合法");
         }
-        $data["id"] = $id;
-        return $this->_db->where($data)->find();
+        return $this->_db->where("id=".$id)->find();
     }
 
     public function updatePosContentById($id, $data){
@@ -82,5 +81,12 @@ class PositionContentModel extends Model
     public function updateListOrder($id, $listorder){
         $data = array("listorder" => intval($listorder));
         return $this->_db->where("id=".$id)->save($data);
+    }
+
+    public function findByPosId($posId, $limit){
+        if (!$posId || !is_numeric($posId)){
+            return 0;
+        }
+        return $this->_db->where("position_id=".$posId)->order("listorder desc")->limit($limit)->select();
     }
 }

@@ -68,7 +68,9 @@ class PositionContentController extends CommonController
             if (!isset($_POST["thumb"]) || !$_POST["thumb"]){
                 if ($_POST["news_id"]){
                     $res = D("News")->find($_POST["news_id"]);
-                    if ($res && is_array($res)){
+                    if (is_null($res)){
+                        return show(0, "缩图不能为空");
+                    }else if($res && is_array($res)){
                         $_POST["thumb"] = $res["thumb"];
                     }
                 }else{
