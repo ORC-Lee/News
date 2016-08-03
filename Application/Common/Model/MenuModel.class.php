@@ -44,7 +44,7 @@ class MenuModel extends Model
      */
     public function getMenus($page = 1, $pageSize = 10, $where = array()){
         $offset = ($page - 1) * $pageSize;
-        $ret = $this->_db->where($where)->order("menu_id asc")->limit("$offset, $pageSize")->select();
+        $ret = $this->_db->where($where)->order("menu_id desc")->limit("$offset, $pageSize")->select();
         return $ret;
     }
 

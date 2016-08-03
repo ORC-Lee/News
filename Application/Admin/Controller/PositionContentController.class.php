@@ -143,4 +143,24 @@ class PositionContentController extends CommonController
             return show(0, $e->getMessage());
         }
     }
+
+    public function listorder(){
+        $jumpUrl = $_SERVER["HTTP_REFERER"];
+        $listorder = $_POST["listorder"];
+        $errors = array();
+        if ($listorder) {
+            foreach ($listorder as $id => $listorder) {
+                //执行更新
+                $res = D("PositionContent")->updateListOrder($id, $listorder);
+                if (false === $res) {
+                    $errors[] = $id;
+                }
+            }
+            if ($errors){
+                return show(0, "更新失败的id--".implode(",", $errors));
+            }
+            return show(1, "更新成功", array("jump_url"=>$jumpUrl));
+        }
+        return show(0, "更新失败");
+    }
 }

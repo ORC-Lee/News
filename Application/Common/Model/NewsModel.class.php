@@ -30,7 +30,7 @@ class NewsModel extends Model
         if (isset($where["catid"]) && $where["catid"]){
             $condition["catid"] = intval($where["catid"]);
         }
-        return $this->_db->where($condition)->order("news_id asc")->limit($offset, $pageSize)->select();
+        return $this->_db->where($condition)->order("news_id desc")->limit($offset, $pageSize)->select();
     }
 
     public function getNewsCount($where = array()){

@@ -102,7 +102,9 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
         <!-- /.row -->
         <div >
             <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>
         </div>
+
         <br/>
         <div class="row">
             <form action="admin.php" method="get">
@@ -136,7 +138,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                     <table class="table table-bordered table-hover singcms-table">
                         <thead>
                         <tr>
-                            <!--<th width="14">排序</th>&lt;!&ndash;7&ndash;&gt;-->
+                            <th width="14">排序</th><!--7-->
                             <th>id</th>
                             <th>标题</th>
                             <th>时间</th>
@@ -147,7 +149,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                         </thead>
                         <tbody>
                         <?php if(is_array($posContents)): foreach($posContents as $key=>$posContent): ?><tr>
-                                <!--<td><input size=4 type='text'  name='' value=""/></td>-->
+                                <td><input size=1 type="text"  name="listorder['<?php echo ($posContent["id"]); ?>']" value="<?php echo ($posContent["listorder"]); ?>"/></td>
                                 <td><?php echo ($posContent["id"]); ?></td>
                                 <td><?php echo ($posContent["title"]); ?></td>
                                 <td><?php echo (date("Y-m-d H:i",$posContent["create_time"])); ?></td>
@@ -165,9 +167,6 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                         </tbody>
                     </table>
                     </form>
-                    <!--<div>-->
-                        <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
-                    <!--</div>-->
                 </div>
             </div>
 

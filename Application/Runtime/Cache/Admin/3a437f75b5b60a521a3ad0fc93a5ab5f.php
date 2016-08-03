@@ -91,7 +91,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=PositionContent">推荐位管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=Position">推荐位管理</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-table">推荐位列表</i>
@@ -110,10 +110,10 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                 <input type="hidden" name="a" value="index"/>
                 <div class="col-md-3">
                     <div class="input-group">
-                        <input class="form-control" name="title" type="text" value="<?php echo ($title); ?>" placeholder="推荐位" />
-                <span class="input-group-btn">
-                  <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
-                </span>
+                        <input class="form-control" name="name" type="text" value="<?php echo ($name); ?>" placeholder="推荐位" />
+                        <span class="input-group-btn">
+                            <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
                     </div>
                 </div>
             </form>
@@ -145,8 +145,8 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                                     <span  attr-status="<?php if($position["status"] == 1): ?>-1<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($position["id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getMenuStatus($position["status"])); ?></span>
                                 </td>
                                 <td>
-                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="" ></span>
-                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id=""  attr-message="删除">
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="<?php echo ($position["id"]); ?>" ></span>
+                                    <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($position["id"]); ?>"  attr-message="删除">
                                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                                     </a>
                                 </td>
@@ -154,9 +154,6 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                         </tbody>
                     </table>
                     </form>
-                    <!--<div>-->
-                        <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
-                    <!--</div>-->
                 </div>
             </div>
 

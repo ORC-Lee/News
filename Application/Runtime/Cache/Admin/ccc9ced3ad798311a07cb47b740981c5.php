@@ -117,7 +117,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
           </div>
           <input type="hidden" name="c" value="content"/>
           <input type="hidden" name="a" value="index"/>
-          <div class="col-md-3">
+            <div class="col-md-3">
             <div class="input-group">
               <input class="form-control" name="title" type="text" value="<?php echo ($title); ?>" placeholder="文章标题" />
                 <span class="input-group-btn">
@@ -207,6 +207,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
     'edit_url' : 'admin.php?c=content&a=edit',
     'add_url' : 'admin.php?c=content&a=add',
     'delete_url' : 'admin.php?c=content&a=delete',
+    'jump_url' : 'admin.php?c=content',
     'set_status_url' : 'admin.php?c=content&a=setStatus',
     'sing_news_view_url' : 'index.php?c=view',
     'listorder_url' : 'admin.php?c=content&a=listorder',

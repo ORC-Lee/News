@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>sing资讯</title>
-  <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
+  <link rel="stylesheet" href="Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="Public/css/home/main.css" type="text/css" />
 </head>
 <body>
 <header id="header">
@@ -12,7 +12,7 @@
     <div class="container">
       <div class="navbar-header">
         <a href="">
-          <img src="/Public/images/logo.png" alt="">
+          <img src="Public/images/logo.png" alt="">
         </a>
       </div>
       <ul class="nav navbar-nav navbar-left">
@@ -31,18 +31,18 @@
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
-            <img src="/Public/images/banner.jpg" alt="">
+            <img src="Public/images/banner.jpg" alt="">
           </div>
           <div class="banner-right">
             <ul>
               <li>
-                <img src="/Public/images/img1.jpg" alt="">
+                <img src="Public/images/img1.jpg" alt="">
               </li>
               <li>
-                <img src="/Public/images/img2.jpg" alt="">
+                <img src="Public/images/img2.jpg" alt="">
               </li>
               <li>
-                <img src="/Public/images/img3.jpg" alt="">
+                <img src="Public/images/img3.jpg" alt="">
               </li>
             </ul>
           </div>
@@ -51,7 +51,7 @@
           <dl>
             <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
             <dd class="news-img">
-              <img src="/Public/images/img4.jpg" alt="">
+              <img src="Public/images/img4.jpg" alt="">
             </dd>
             <dd class="news-intro">
               手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
@@ -63,7 +63,7 @@
           <dl>
             <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
             <dd class="news-img">
-              <img src="/Public/images/img4.jpg" alt="">
+              <img src="Public/images/img4.jpg" alt="">
             </dd>
             <dd class="news-intro">
               手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
@@ -75,7 +75,7 @@
           <dl>
             <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
             <dd class="news-img">
-              <img src="/Public/images/img4.jpg" alt="">
+              <img src="Public/images/img4.jpg" alt="">
             </dd>
             <dd class="news-intro">
               手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
@@ -87,7 +87,7 @@
           <dl>
             <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
             <dd class="news-img">
-              <img src="/Public/images/img4.jpg" alt="">
+              <img src="Public/images/img4.jpg" alt="">
             </dd>
             <dd class="news-intro">
               手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
@@ -123,10 +123,10 @@
           </ul>
         </div>
         <div class="right-hot">
-          <img src="/Public/images/img5.jpg" alt="">
+          <img src="Public/images/img5.jpg" alt="">
         </div>
         <div class="right-hot">
-          <img src="/Public/images/img6.jpg" alt="">
+          <img src="Public/images/img6.jpg" alt="">
         </div>
       </div>
     </div>

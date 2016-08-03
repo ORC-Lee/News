@@ -24,7 +24,9 @@
         <!-- /.row -->
         <div >
             <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+            <button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>
         </div>
+
         <br/>
         <div class="row">
             <form action="admin.php" method="get">
@@ -60,7 +62,7 @@
                     <table class="table table-bordered table-hover singcms-table">
                         <thead>
                         <tr>
-                            <!--<th width="14">排序</th>&lt;!&ndash;7&ndash;&gt;-->
+                            <th width="14">排序</th><!--7-->
                             <th>id</th>
                             <th>标题</th>
                             <th>时间</th>
@@ -72,7 +74,7 @@
                         <tbody>
                         <foreach name="posContents" item="posContent">
                             <tr>
-                                <!--<td><input size=4 type='text'  name='' value=""/></td>-->
+                                <td><input size=1 type="text"  name="listorder['{$posContent.id}']" value="{$posContent.listorder}"/></td>
                                 <td>{$posContent.id}</td>
                                 <td>{$posContent.title}</td>
                                 <td>{$posContent.create_time|date="Y-m-d H:i",###}</td>
@@ -91,9 +93,6 @@
                         </tbody>
                     </table>
                     </form>
-                    <!--<div>-->
-                        <!--<button  id="button-listorder" type="button" class="btn btn-primary dropdown-toggle" ><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>更新排序</button>-->
-                    <!--</div>-->
                 </div>
             </div>
 

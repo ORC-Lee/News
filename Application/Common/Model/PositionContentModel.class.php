@@ -28,10 +28,16 @@ class PositionContentModel extends Model
         if (isset($where["position_id"]) && isset($where["position_id"])){
             $where["position_id"] = intval($where["position_id"]);
         }
-        return $this->_db->where($where)->order("id desc")->limit("$offset,$pageSize")->select();
+        return $this->_db->where($where)->order("listorder desc, id desc")->limit("$offset,$pageSize")->select();
     }
 
     public function getPosContentCount($where = array()){
+        if (isset($where["title"]) && $where["title"]) {
+            $where["title"] = array("like", array("%" . $where["title"] . "%"));
+        }
+        if (isset($where["position_id"]) && isset($where["position_id"])){
+            $where["position_id"] = intval($where["position_id"]);
+        }
         return $this->_db->where($where)->count();
     }
 
@@ -71,5 +77,10 @@ class PositionContentModel extends Model
         }
         $data["id"] = $id;
         return $this->_db->where($data)->delete();
+    }
+
+    public function updateListOrder($id, $listorder){
+        $data = array("listorder" => intval($listorder));
+        return $this->_db->where("id=".$id)->save($data);
     }
 }

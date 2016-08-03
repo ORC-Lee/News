@@ -177,7 +177,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                <button type="button" class="btn btn-default" id="singcms-button-submit">添加</button>
               </div>
             </div>
           </form>

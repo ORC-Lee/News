@@ -103,31 +103,30 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
             </div>
         </div>
         <!-- /.row -->
+        <div>
+            <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
+        </div>
+        <br/>
         <div class="row">
             <form action="admin.php" method="get">
-
-                <div class="input-group">
-                    <span class="input-group-addon">类型</span>
-                    <select class="form-control" name="type">
-                        <option value='' >请选择类型</option>
-
-                        <option value="1" <?php if($type == 1): ?>selected="selected"<?php endif; ?>>后台菜单</option>
-                        <option value="0" <?php if($type == 0): ?>selected="selected"<?php endif; ?>>前端栏目</option>
-                    </select>
-
-
-                <input type="hidden" name="c" value="menu"/>
-                <input type="hidden" name="a" value="index"/>
-                <span class="input-group-btn">
-                  <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
-                </span>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">类型</span>
+                            <select class="form-control" name="type">
+                                <option value='-1' >请选择类型</option>
+                                <option value="1" <?php if($type == 1): ?>selected="selected"<?php endif; ?>>后台菜单</option>
+                                <option value="0" <?php if($type == 0): ?>selected="selected"<?php endif; ?>>前端栏目</option>
+                            </select>
+                        <input type="hidden" name="c" value="menu"/>
+                        <input type="hidden" name="a" value="index"/>
+                        <span class="input-group-btn">
+                            <button id="sub_data" type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                    </div>
                 </div>
             </form>
         </div>
-        <br/>
-        <div>
-          <button  id="button-add" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加 </button>
-        </div>
+
         <div class="row">
             <div class="col-lg-6">
                 <h3></h3>

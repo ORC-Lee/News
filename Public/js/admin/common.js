@@ -104,7 +104,7 @@ function toSetStauts(url, data){
 }
 
 /**
- * 推送
+ * 推送操作
  */
 $("#singcms-push").click(function (){
     var position_id = $("#select_push").val();
@@ -131,3 +131,26 @@ $("#singcms-push").click(function (){
         }
     },"JSON");
 })
+
+/**
+ * 排序操作
+ */
+$("#button-listorder").click(function(){
+    var data = $("#singcms-listorder").serializeArray();
+    postData = {};
+    $(data).each(function (i){
+        postData[this.name] = this.value;
+    });
+    var url = SCOPE.listorder_url;
+    //发送Ajax请求
+    $.post(url, postData, function(result){
+        if (0 == result.status){
+            //失败
+            return dialog.error(result.message);
+        }
+        if (1 == result.status){
+            //成功
+            return dialog.success(result.message, result["data"]["jump_url"]);
+        }
+    }, "JSON");
+});
