@@ -96,4 +96,25 @@ class NewsModel extends Model
         $where["news_id"] = array("in", implode(",", $push));
         return $this->_db->where($where)->select();
     }
+
+    /**
+     * 取得文章排名
+     * @param $limit
+     * @return array
+     */
+    public function getRank($limit){
+        return $this->_db->where("status=1")->order("count desc, news_id desc")->limit($limit)->select();
+    }
+
+    public function updateCountById($id, $count){
+        if (!$id || !is_numeric($id)){
+            throw_exception("id不合法");
+        }
+        if (!is_numeric($count)){
+            throw_exception("count不是数字");
+        }
+
+        $data['count'] = $count;
+        $this->_db->where("news_id=".$id)->save($data);
+    }
 }

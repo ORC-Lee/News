@@ -1,0 +1,24 @@
+<!--网站头部部分-->
+<include file="index/header"/>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-9">
+                <div class="news-detail">
+                        <h1>{$result['news'].title}</h1>
+                        <img width=860 height=435 src="{$result['news'].thumb}" alt="">
+                        <h4 class="news-intro">
+                            {$result['news'].content}
+                        </h4>
+                        <div class="news-info" align="right">
+                            作者：{$result['news'].username} <span>{$result['news'].create_time|date="Y-m-d H:i:s", ###}</span> 阅读({$result['news'].count})
+                        </div>
+                </div>
+            </div>
+            <!--网站右侧部分-->
+            <include file="index/right"/>
+        </div>
+    </div>
+</section>
+</body>
+</html>

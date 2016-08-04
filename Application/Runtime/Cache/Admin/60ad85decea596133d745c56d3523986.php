@@ -133,7 +133,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">url:</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请url地址">
+							<input type="text" class="form-control" name="url" id="inputPassword3" placeholder="请填写url地址">
 						</div>
 					</div>
 					<div class="form-group">

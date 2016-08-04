@@ -28,38 +28,22 @@ $config = D("Basic")->select(); $menus = D("Menu")->getBarMenus(); ?>
     </div>
 </header>
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-9">
-        <div class="banner">
-          <div class="banner-left">
-            <a target="_blank" href="index.php?c=Detail&id=<?php echo ($result['topPicNews'][0]["news_id"]); ?>"><img src="<?php echo ($result['topPicNews'][0]["thumb"]); ?>" alt=""></a>
-          </div>
-          <div class="banner-right">
-            <ul>
-              <?php if(is_array($result['topSmallNews'])): foreach($result['topSmallNews'] as $key=>$topSmallNew): ?><li>
-                <a target="_blank" href="index.php?c=Detail&id=<?php echo ($topSmallNew["news_id"]); ?>"><img src="<?php echo ($topSmallNew["thumb"]); ?>" alt=""></a>
-              </li><?php endforeach; endif; ?>
-            </ul>
-          </div>
-        </div>
-        <div class="news-list">
-          <?php if(is_array($result['newsList'])): foreach($result['newsList'] as $key=>$newList): ?><dl>
-            <dt><a target="_blank" href="index.php?c=Detail&id=<?php echo ($newList["news_id"]); ?>"><?php echo ($newList["title"]); ?></a></dt>
-            <dd class="news-img">
-              <a target="_blank" href="index.php?c=Detail&id=<?php echo ($newList["news_id"]); ?>"><img width=200 height=120 src="<?php echo ($newList["thumb"]); ?>" alt=""></a>
-            </dd>
-            <dd class="news-intro">
-              <?php echo ($newList["description"]); ?>
-            </dd>
-            <dd class="news-info">
-              作者：<?php echo ($newList["username"]); ?> <span><?php echo (date("Y-m-d H:i:s",$newList["create_time"])); ?></span> 阅读(<?php echo ($newList["count"]); ?>)
-            </dd>
-          </dl><?php endforeach; endif; ?>
-        </div>
-      </div>
-      <!--网站右侧部分-->
-      <div class="col-sm-3 col-md-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-9">
+                <div class="news-detail">
+                        <h1><?php echo ($result['news']["title"]); ?></h1>
+                        <img width=860 height=435 src="<?php echo ($result['news']["thumb"]); ?>" alt="">
+                        <h4 class="news-intro">
+                            <?php echo ($result['news']["content"]); ?>
+                        </h4>
+                        <div class="news-info" align="right">
+                            作者：<?php echo ($result['news']["username"]); ?> <span><?php echo (date("Y-m-d H:i:s", $result['news']["create_time"])); ?></span> 阅读(<?php echo ($result['news']["count"]); ?>)
+                        </div>
+                </div>
+            </div>
+            <!--网站右侧部分-->
+            <div class="col-sm-3 col-md-3">
     <div class="right-title">
         <h3>文章排行</h3>
         <span>TOP ARTICLES</span>
@@ -78,8 +62,8 @@ $config = D("Basic")->select(); $menus = D("Menu")->getBarMenus(); ?>
             <a target="_blank" href="<?php echo ($rightAdv["url"]); ?>"><img src="<?php echo ($rightAdv["thumb"]); ?>" alt="<?php echo ($rightAdv["title"]); ?>"></a>
         </div><?php endforeach; endif; else: echo "" ;endif; ?>
 </div>
+        </div>
     </div>
-  </div>
 </section>
 </body>
 </html>

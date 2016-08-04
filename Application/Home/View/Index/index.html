@@ -6,67 +6,33 @@
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
-            <a target="_blank" href="index.php?c=Detail&id={$topPicNews[0].id}"><img src="{$topPicNews[0].thumb}" alt=""></a>
+            <a target="_blank" href="index.php?c=Detail&id={$result['topPicNews'][0].news_id}"><img src="{$result['topPicNews'][0].thumb}" alt=""></a>
           </div>
           <div class="banner-right">
             <ul>
-              <foreach name="topSmallNews" item="topSmallNew">
+              <foreach name="result['topSmallNews']" item="topSmallNew">
               <li>
-                <a target="_blank" href="index.php?c=Detail&id={$topSmallNew.id}"><img src="{$topSmallNew.thumb}" alt=""></a>
+                <a target="_blank" href="index.php?c=Detail&id={$topSmallNew.news_id}"><img src="{$topSmallNew.thumb}" alt=""></a>
               </li>
               </foreach>
             </ul>
           </div>
         </div>
         <div class="news-list">
+          <foreach name="result['newsList']" item="newList">
           <dl>
-            <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
+            <dt><a target="_blank" href="index.php?c=Detail&id={$newList.news_id}">{$newList.title}</a></dt>
             <dd class="news-img">
-              <img src="Public/images/img4.jpg" alt="">
+              <a target="_blank" href="index.php?c=Detail&id={$newList.news_id}"><img width=200 height=120 src="{$newList.thumb}" alt=""></a>
             </dd>
             <dd class="news-intro">
-              手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
+              {$newList.description}
             </dd>
             <dd class="news-info">
-              秋远俊二 <span>15:22</span> 阅读(1万)
+              作者：{$newList.username} <span>{$newList.create_time|date="Y-m-d H:i:s",###}</span> 阅读({$newList.count})
             </dd>
           </dl>
-          <dl>
-            <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
-            <dd class="news-img">
-              <img src="Public/images/img4.jpg" alt="">
-            </dd>
-            <dd class="news-intro">
-              手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
-            </dd>
-            <dd class="news-info">
-              秋远俊二 <span>15:22</span> 阅读(1万)
-            </dd>
-          </dl>
-          <dl>
-            <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
-            <dd class="news-img">
-              <img src="Public/images/img4.jpg" alt="">
-            </dd>
-            <dd class="news-intro">
-              手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
-            </dd>
-            <dd class="news-info">
-              秋远俊二 <span>15:22</span> 阅读(1万)
-            </dd>
-          </dl>
-          <dl>
-            <dt>一个悲伤的故事，马云彻底被王兴抛弃了</dt>
-            <dd class="news-img">
-              <img src="Public/images/img4.jpg" alt="">
-            </dd>
-            <dd class="news-intro">
-              手段太刚猛，吃不消，美团这块肉，马云注定无福消遣。
-            </dd>
-            <dd class="news-info">
-              秋远俊二 <span>15:22</span> 阅读(1万)
-            </dd>
-          </dl>
+          </foreach>
         </div>
       </div>
       <!--网站右侧部分-->

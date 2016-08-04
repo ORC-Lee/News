@@ -17,14 +17,14 @@ $menus = D("Menu")->getBarMenus();
     <div class="navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <a href="">
+                <a href="index.php?m=Home&c=Index&a=index">
                     <img src="Public/images/logo.png" alt="">
                 </a>
             </div>
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="" <if condition="$result['catid'] eq 0">class="curr"</if>>首页</a></li>
+                <li><a href="index.php?m=Home&c=Index&a=index" <if condition="$result['catId'] eq 0">class="curr"</if>>首页</a></li>
                 <foreach name="menus" item="menu">
-                    <li><a href="index.php?c=Cat&id={$menu.menu_id}" <if condition="$menu['menu_id'] eq $result['catid']">class="curr"</if>>{$menu.name}</a></li>
+                    <li><a href="index.php?c=Cat&id={$menu.menu_id}" <if condition="$menu['menu_id'] eq $result['catId']">class="curr"</if>>{$menu.name}</a></li>
                 </foreach>
             </ul>
         </div>

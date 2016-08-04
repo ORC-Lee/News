@@ -1,760 +1,342 @@
-[ 2016-08-04T00:00:36+08:00 ] ::1 /News/index.php
+[ 2016-08-04T16:31:23+08:00 ] 127.0.0.1 /News/index.php?m=Home&c=Index&a=index
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000147s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001649s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001163s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001991s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0005s ]
-
-[ 2016-08-04T00:00:46+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001506s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001184s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002124s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-
-[ 2016-08-04T00:00:52+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000283s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002094s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001667s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
-
-[ 2016-08-04T00:00:57+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000170s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001597s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002295s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 4   [ RunTime:0.0005s ]
-
-[ 2016-08-04T00:04:15+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000148s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001688s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001111s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001896s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 30   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001125s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043356s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.044178s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001144s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001929s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001116s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001872s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-08-04T00:04:43+08:00 ] ::1 /News/index.php
+[ 2016-08-04T16:31:34+08:00 ] 127.0.0.1 /News/index.php?c=Detail&id=18
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001445s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002153s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0012s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0004s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000426s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001331s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0008s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062793s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.063541s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000994s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001873s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001866s ]
-
-[ 2016-08-04T00:05:07+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000144s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001326s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001767s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 10   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
 SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news` WHERE ( news_id=18 ) LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000357s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001214s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045113s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.045869s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000988s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001753s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001768s ]
-
-[ 2016-08-04T00:05:25+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001564s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002082s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000368s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001157s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040260s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.041086s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000940s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001700s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001830s ]
-
-[ 2016-08-04T00:05:31+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000157s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001482s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000371s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001213s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060731s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.061536s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001180s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001996s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001965s ]
-
-[ 2016-08-04T00:06:02+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001581s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001174s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002107s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001098s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 36 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044982s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.045766s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000908s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001670s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001860s ]
-
-[ 2016-08-04T00:06:55+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001519s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001202s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002205s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0007s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000585s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001618s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0012s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067237s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.068086s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000942s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001078s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001886s ]
-
-[ 2016-08-04T00:07:03+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001482s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002077s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0007s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0004s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000375s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001131s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042727s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.043575s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000886s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001640s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001826s ]
-
-[ 2016-08-04T00:08:23+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001485s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002165s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0007s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000375s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001277s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
-NOTIC: [8] Undefined index: thumb D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 41 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073430s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.074267s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000935s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001811s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001132s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001870s ]
-
-[ 2016-08-04T00:08:57+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000163s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001716s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001411s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002759s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000366s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001138s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074228s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.074963s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001067s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001850s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001838s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002727s ]
-
-[ 2016-08-04T00:10:17+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000175s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001615s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001211s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002113s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000436s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001554s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0004s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069760s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.070563s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000892s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001650s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001274s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002089s ]
-
-[ 2016-08-04T00:11:17+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000145s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001925s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0004s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000370s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001094s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0011s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0007s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074414s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.075457s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000947s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001709s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001951s ]
-
-[ 2016-08-04T00:11:19+08:00 ] ::1 /News/index.php?c=Detail&id=28
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000169s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001414s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001109s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001923s ]
-ERR: 无法加载控制器:Detail
-
-[ 2016-08-04T00:11:24+08:00 ] ::1 /News/index.php?c=Detail&id=16
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000379s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002462s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002357s ]
-ERR: 无法加载控制器:Detail
-
-[ 2016-08-04T00:15:06+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001572s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001847s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000350s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001125s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
 SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050838s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.051606s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 22 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001020s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001761s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001949s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-08-04T00:19:51+08:00 ] ::1 /News/index.php?c=Detail&id=28
+[ 2016-08-04T16:32:17+08:00 ] 127.0.0.1 /News/index.php?c=Detail&id=15
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000299s ]
-INFO: [ app_init ] --END-- [ RunTime:0.002301s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001851s ]
-ERR: 无法加载控制器:Detail
-
-[ 2016-08-04T00:21:55+08:00 ] ::1 /News/
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001523s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001826s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 10   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( news_id=15 ) LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000354s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001095s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048167s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.048952s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 22 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+NOTIC: [8] Undefined variable: result E:\wamp64\www\News\Application\Runtime\Cache\Home\9e03bccc44c1f457e70232be6abc4e68.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001100s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001986s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001897s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-08-04T00:22:02+08:00 ] ::1 /News/
+[ 2016-08-04T16:32:51+08:00 ] 127.0.0.1 /News/index.php?m=Home&c=Index&a=index
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001723s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001572s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002664s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001084s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046344s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.047121s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000926s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001663s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001740s ]
-
-[ 2016-08-04T00:22:22+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001474s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001244s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002167s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0005s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000351s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001146s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049340s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.050123s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001309s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.002374s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001600s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002444s ]
-
-[ 2016-08-04T00:22:27+08:00 ] ::1 /News/index.php?c=Detail&id=26
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001489s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002360s ]
-ERR: 无法加载控制器:Detail
-
-[ 2016-08-04T00:22:55+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001490s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002048s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0009s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0007s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000446s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001407s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0011s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057348s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.058270s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000889s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001656s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001798s ]
-
-[ 2016-08-04T00:23:33+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001427s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001269s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002200s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
-SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0012s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0006s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000391s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001170s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0008s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0005s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047098s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.047900s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001067s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.002336s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001886s ]
-
-[ 2016-08-04T00:23:44+08:00 ] ::1 /News/index.php
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001436s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001690s ]
-NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
 SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 30   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000361s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.001138s ]
-NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\BasicModel.class.php 第 32 行.
-NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) D:\Study\PHP\Demo\News\Application\Common\Model\MenuModel.class.php 第 123 行.
-SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
-SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0006s ]
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-NOTIC: [8] Undefined variable: result D:\Study\PHP\Demo\News\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 25 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051731s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.052943s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.002084s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001035s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001841s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-08-04T00:24:08+08:00 ] ::1 /News/index.php?c=Detail&id=28
+[ 2016-08-04T16:32:52+08:00 ] 127.0.0.1 /News/index.php?c=Detail&id=23
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001230s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001179s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002300s ]
-ERR: 无法加载控制器:Detail
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 10   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( news_id=23 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsContentModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsContentModel.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `cms_news_content` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news_content` WHERE ( news_id=23 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `cms_news` SET `count`='1' WHERE ( news_id=23 ) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 24 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-04T16:32:58+08:00 ] 127.0.0.1 /News/index.php?c=Detail&id=22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 10   [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( news_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsContentModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsContentModel.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `cms_news_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news_content` WHERE ( news_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `cms_news` SET `count`='1' WHERE ( news_id=22 ) [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 24 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+NOTIC: [8] Undefined index: catId E:\wamp64\www\News\Application\Runtime\Cache\Home\0d75cb75cd30b13fdd4834afd69acb19.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-04T16:33:07+08:00 ] 127.0.0.1 /News/index.php?c=Cat&id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p E:\wamp64\www\News\Application\Home\Controller\CatController.class.php 第 24 行.
+NOTIC: [8] Undefined index: pageSize E:\wamp64\www\News\Application\Home\Controller\CatController.class.php 第 25 行.
+SQL: SELECT * FROM `cms_news` WHERE `catid` = 12 ORDER BY news_id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `catid` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\wamp64\www\News\Application\Runtime\Cache\Home\14fcc139096cfd1d2075eb8db7e60b1e.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-04T16:33:08+08:00 ] 127.0.0.1 /News/index.php?c=Cat&id=13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 20   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=13 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: p E:\wamp64\www\News\Application\Home\Controller\CatController.class.php 第 24 行.
+NOTIC: [8] Undefined index: pageSize E:\wamp64\www\News\Application\Home\Controller\CatController.class.php 第 25 行.
+SQL: SELECT * FROM `cms_news` WHERE `catid` = 13 ORDER BY news_id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `catid` = 13 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given E:\wamp64\www\News\Application\Runtime\Cache\Home\14fcc139096cfd1d2075eb8db7e60b1e.php 第 45 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-08-04T16:33:10+08:00 ] 127.0.0.1 /News/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\CommonController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) E:\wamp64\www\News\Application\Home\Controller\CommonController.class.php 第 23 行.
+NOTIC: [2048] Declaration of Common\Model\PositionContentModel::delete() should be compatible with Think\Model::delete($options = Array) E:\wamp64\www\News\Application\Common\Model\PositionContentModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=1 ) ORDER BY listorder desc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=3 ) ORDER BY listorder desc LIMIT 3   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_news` WHERE ( status=1 ) ORDER BY count desc, news_id desc LIMIT 30   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position_content` WHERE ( position_id=5 ) ORDER BY listorder desc LIMIT 2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Common\Model\BasicModel::save() should be compatible with Think\Model::save($data = '', $options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) E:\wamp64\www\News\Application\Common\Model\BasicModel.class.php 第 32 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) E:\wamp64\www\News\Application\Common\Model\MenuModel.class.php 第 123 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( type=0 ) ORDER BY menu_id asc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
