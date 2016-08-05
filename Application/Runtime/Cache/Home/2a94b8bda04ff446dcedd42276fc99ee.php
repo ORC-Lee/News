@@ -33,6 +33,7 @@ $config = D("Basic")->select(); $menus = D("Menu")->getBarMenus(); ?>
       <div class="col-sm-9 col-md-9">
         <div class="banner">
           <div class="banner-left">
+            <div class="banner-info"><span>阅读数</span><i class="news_count node-<?php echo ($result['topPicNews'][0]['news_id']); ?>" news-id="<?php echo ($result['topPicNews'][0]['news_id']); ?>"></i></div>
             <a target="_blank" href="index.php?c=Detail&id=<?php echo ($result['topPicNews'][0]["news_id"]); ?>"><img src="<?php echo ($result['topPicNews'][0]["thumb"]); ?>" alt=""></a>
           </div>
           <div class="banner-right">
@@ -53,7 +54,7 @@ $config = D("Basic")->select(); $menus = D("Menu")->getBarMenus(); ?>
               <?php echo ($newList["description"]); ?>
             </dd>
             <dd class="news-info">
-              作者：<?php echo ($newList["username"]); ?> <span><?php echo (date("Y-m-d H:i:s",$newList["create_time"])); ?></span> 阅读(<?php echo ($newList["count"]); ?>)
+              作者：<?php echo ($newList["username"]); ?> <span><?php echo (date("Y-m-d H:i:s",$newList["create_time"])); ?></span> 阅读( <i class="news_count node-<?php echo ($newList["news_id"]); ?>" news-id="<?php echo ($newList["news_id"]); ?>" ></i> )
             </dd>
           </dl><?php endforeach; endif; ?>
         </div>
@@ -81,5 +82,7 @@ $config = D("Basic")->select(); $menus = D("Menu")->getBarMenus(); ?>
     </div>
   </div>
 </section>
+<script src="Public/js/jquery.js"></script>
+<script src="Public/js/count.js"></script>
 </body>
 </html>

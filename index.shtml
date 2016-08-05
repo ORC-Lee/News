@@ -1,0 +1,168 @@
+<!--网站头部部分-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>singcms资讯网</title>
+    <meta name="keywords" content="singcms 资讯 新闻 体育 娱乐 财经 科技">
+    <meta name="description" content="singcms资讯网提供最新的、最全的各方面资讯。">
+    <link rel="stylesheet" href="Public/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="Public/css/home/main.css" type="text/css" />
+</head>
+<body>
+<header id="header">
+    <div class="navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.php?m=Home&c=Index&a=index">
+                    <img src="Public/images/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="index.php?m=Home&c=Index&a=index" class="curr">首页</a></li>
+                <li><a href="index.php?c=Cat&id=7" >体育</a></li><li><a href="index.php?c=Cat&id=8" >财经</a></li><li><a href="index.php?c=Cat&id=11" >新闻</a></li><li><a href="index.php?c=Cat&id=12" >科技</a></li><li><a href="index.php?c=Cat&id=13" >娱乐</a></li>            </ul>
+        </div>
+    </div>
+</header>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-9">
+        <div class="banner">
+          <div class="banner-left">
+            <div class="banner-info"><span>阅读数</span><i class="news_count node-23" news-id="23"></i></div>
+            <a target="_blank" href="index.php?c=Detail&id=23"><img src="upload/2016/08/03/57a19e6eb141d.jpg" alt=""></a>
+          </div>
+          <div class="banner-right">
+            <ul>
+              <li>
+                <a target="_blank" href="index.php?c=Detail&id=22"><img src="upload/2016/08/03/57a19dea6adcb.jpg" alt=""></a>
+              </li><li>
+                <a target="_blank" href="index.php?c=Detail&id=25"><img src="upload/2016/08/03/57a1a02d5c97f.jpg" alt=""></a>
+              </li><li>
+                <a target="_blank" href="index.php?c=Detail&id=26"><img src="upload/2016/08/03/57a1a0c991dc3.jpg" alt=""></a>
+              </li>            </ul>
+          </div>
+        </div>
+        <div class="news-list">
+          <dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=29">奥运女足-玛塔送助攻赵丽娜现失误 中国0-3巴西</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=29"><img width=200 height=120 src="upload/2016/08/04/57a2e5e559274.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              奥运女足 中国0-3巴西            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-04 14:51:33</span> 阅读( <i class="news_count node-29" news-id="29" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=27">萌萌的玉兔号月球车跟人类说了再见：她再也不会醒来了</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=27"><img width=200 height=120 src="upload/2016/08/03/57a1a3d539ef5.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              玉兔号月球车跟人类说了再见            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:57:50</span> 阅读( <i class="news_count node-27" news-id="27" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=23">美男女篮拒奥运村住豪华渡轮</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=23"><img width=200 height=120 src="upload/2016/08/03/57a19e6eb141d.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              美男女篮拒奥运村住豪华渡轮            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:35:04</span> 阅读( <i class="news_count node-23" news-id="23" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=26">上半年7省份居民收入增速跑输GDP，东西收入差距大</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=26"><img width=200 height=120 src="upload/2016/08/03/57a1a0c991dc3.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              上半年7省份居民收入增速跑输GDP，东西收入差距大            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:48:35</span> 阅读( <i class="news_count node-26" news-id="26" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=25">思域的死离不开东风本田的作 销量大幅下滑令人堪忧</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=25"><img width=200 height=120 src="upload/2016/08/03/57a1a02d5c97f.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              思域销量大幅下滑            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:42:55</span> 阅读( <i class="news_count node-25" news-id="25" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=22"> 男篮热身最后1战遭巴西逆转 </a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=22"><img width=200 height=120 src="upload/2016/08/03/57a19dea6adcb.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+               男篮热身遭巴西逆转             </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:33:07</span> 阅读( <i class="news_count node-22" news-id="22" ></i> )
+            </dd>
+          </dl><dl>
+            <dt><a target="_blank" href="index.php?c=Detail&id=24">林心如办归宁宴 霍建华向亲朋承诺:我会好好爱她</a></dt>
+            <dd class="news-img">
+              <a target="_blank" href="index.php?c=Detail&id=24"><img width=200 height=120 src="upload/2016/08/03/57a19fa767825.jpg" alt=""></a>
+            </dd>
+            <dd class="news-intro">
+              林心如办归宁宴 霍建华向亲朋承诺:我会好好爱她            </dd>
+            <dd class="news-info">
+              作者：admin <span>2016-08-03 15:40:19</span> 阅读( <i class="news_count node-24" news-id="24" ></i> )
+            </dd>
+          </dl>        </div>
+      </div>
+      <!--网站右侧部分-->
+      <div class="col-sm-3 col-md-3">
+    <div class="right-title">
+        <h3>文章排行</h3>
+        <span>TOP ARTICLES</span>
+    </div>
+    <div class="right-content">
+        <ul>
+            <li class="num1 curr">
+                <a target="_blank" href="index.php?c=Detail&id=29">奥运女足-玛塔送助攻赵丽娜现失误 中国0-3巴西</a>
+                <div class="intro">
+                        奥运女足 中国0-3巴西                    </div>            </li>
+        </ul><ul>
+            <li class="num2 curr">
+                <a target="_blank" href="index.php?c=Detail&id=27">萌萌的玉兔号月球车跟人类说了再见：她再也不会醒来了</a>
+                            </li>
+        </ul><ul>
+            <li class="num3 curr">
+                <a target="_blank" href="index.php?c=Detail&id=23">美男女篮拒奥运村住豪华渡轮</a>
+                            </li>
+        </ul><ul>
+            <li class="num4 curr">
+                <a target="_blank" href="index.php?c=Detail&id=26">上半年7省份居民收入增速跑输GDP，东西收入差距大</a>
+                            </li>
+        </ul><ul>
+            <li class="num5 curr">
+                <a target="_blank" href="index.php?c=Detail&id=25">思域的死离不开东风本田的作 销量大幅下滑令人堪忧</a>
+                            </li>
+        </ul><ul>
+            <li class="num6 curr">
+                <a target="_blank" href="index.php?c=Detail&id=22"> 男篮热身最后1战遭巴西逆转 </a>
+                            </li>
+        </ul><ul>
+            <li class="num7 curr">
+                <a target="_blank" href="index.php?c=Detail&id=24">林心如办归宁宴 霍建华向亲朋承诺:我会好好爱她</a>
+                            </li>
+        </ul>    </div>
+    <div class="right-hot">
+            <a target="_blank" href="http://baijiahao.baidu.com/builder/app/login"><img src="upload/2016/08/04/57a2abfd69f46.jpg" alt="百家号"></a>
+        </div><div class="right-hot">
+            <a target="_blank" href="http://www.iqiyi.com/a_19rrhawhch.html?vfm=2008_aldbd"><img src="upload/2016/08/04/57a2ac1694f55.jpg" alt="BIG"></a>
+        </div></div>
+    </div>
+  </div>
+</section>
+<script src="Public/js/jquery.js"></script>
+<script src="Public/js/count.js"></script>
+</body>
+</html>

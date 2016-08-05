@@ -90,9 +90,9 @@
                     <td><input type="checkbox" name="pushcheck" value="{$iNews.news_id}"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
                     <td>{$iNews.news_id}</td>
-                    <td>{$iNews.title}</td>
+                    <td width="30%">{$iNews.title}</td>
                     <td>{$iNews.catid|getCatName=$menus,###}</td>
-                    <td>{$iNews.copyfrom|getCopyFromById}</td>
+                    <td >{$iNews.copyfrom|getCopyFromById}</td>
                     <td>{$iNews.thumb|isThumb}</td>
                     <td>{$iNews.create_time|date="Y-m-d H:i",###}</td>
                     <td><span  attr-status="<if condition='$iNews.status eq 1'>0<else/>1</if>"  attr-id="{$iNews.news_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$iNews.status|getMenuStatus}</span></td>
@@ -100,7 +100,7 @@
                       <a href="javascript:void(0)" id="singcms-delete"  attr-id="{$iNews.news_id}"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
-
+                      <a target="_blank" href="index.php?c=detail&a=view&id={$iNews.news_id}" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
                     </td>
                   </tr>
                 </volist>

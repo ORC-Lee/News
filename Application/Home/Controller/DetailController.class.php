@@ -44,6 +44,14 @@ class DetailController extends CommonController
             "rightAdvs" => $rightAdvs,
             "news" => $news
         ));
-        return $this->display();
+        return $this->display("Detail/index");
+    }
+
+
+    /**
+     *后台页面预览
+     */
+    public function view(){
+        $this->index();
     }
 }

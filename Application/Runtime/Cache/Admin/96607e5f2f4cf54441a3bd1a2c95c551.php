@@ -92,39 +92,16 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
         <a href="admin.php?c=basic&a=cache"><button type="button" class="btn <?php if($type == 2): ?>btn-primary<?php endif; ?>"> 缓存配置</button></a>
     </div>
 </div>
+
 		<!-- /.row -->
-		<br/><br/>
 		<div class="row">
 			<div class="col-lg-6">
-
-				<form class="form-horizontal" id="singcms-form">
-					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">站点标题:</label>
-						<div class="col-sm-5">
-							<input type="text" name="title" value="<?php echo ($message["title"]); ?>" class="form-control" id="inputname" placeholder="请填写站点标题">
-						</div>
+				<div class="form-group">
+					<label for="inputname" class="col-sm-2 control-label">更新首页缓存:</label>
+					<div class="col-sm-5">
+						<button type="button" class="btn" id="cache-index">确定更新</button>
 					</div>
-
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">站点关键词:</label>
-						<div class="col-sm-5">
-							<input type="text" class="form-control" value="<?php echo ($message["keywords"]); ?>" name="keywords" id="inputPassword3" placeholder="请填写站点关键词">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">站点描述:</label>
-						<div class="col-sm-5">
-							<textarea class="form-control" rows="3" name="description"><?php echo ($message["description"]); ?></textarea>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-10">
-							<button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
-						</div>
-					</div>
-				</form>
-
+				</div>
 			</div>
 
 		</div>
@@ -139,10 +116,21 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 </div>
 <!-- /#wrapper -->
 <script>
-	var SCOPE = {
-		'save_url' : 'admin.php?c=basic&a=add',
-		'jump_url' : 'admin.php?c=basic',
-	};
+  $("#cache-index").click(function(){
+	var url = 'index.php?c=index&a=build_html';
+	var jump_url = 'admin.php?c=basic&a=cache';
+	var postData = {};
+
+	$.post(url, postData,function(result){
+	  if(1 == result.status) {
+		// 成功
+		return dialog.success(result.message,jump_url);
+	  }else if(0 == result.status) {
+		return dialog.error(result.message);
+	  }
+
+	},"JSON");
+  });
 
 </script>
 <script src="Public/js/admin/common.js"></script>

@@ -163,9 +163,9 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                     <td><input type="checkbox" name="pushcheck" value="<?php echo ($iNews["news_id"]); ?>"></td>
                     <!--<td><input size=4 type='text'  name='' value=""/></td>&lt;!&ndash;6.7&ndash;&gt;-->
                     <td><?php echo ($iNews["news_id"]); ?></td>
-                    <td><?php echo ($iNews["title"]); ?></td>
+                    <td width="30%"><?php echo ($iNews["title"]); ?></td>
                     <td><?php echo (getCatName($menus,$iNews["catid"])); ?></td>
-                    <td><?php echo (getCopyFromById($iNews["copyfrom"])); ?></td>
+                    <td ><?php echo (getCopyFromById($iNews["copyfrom"])); ?></td>
                     <td><?php echo (isThumb($iNews["thumb"])); ?></td>
                     <td><?php echo (date("Y-m-d H:i",$iNews["create_time"])); ?></td>
                     <td><span  attr-status="<?php if($iNews["status"] == 1): ?>0<?php else: ?>1<?php endif; ?>"  attr-id="<?php echo ($iNews["news_id"]); ?>" class="sing_cursor singcms-on-off" id="singcms-on-off" ><?php echo (getMenuStatus($iNews["status"])); ?></span></td>
@@ -173,7 +173,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                       <a href="javascript:void(0)" id="singcms-delete"  attr-id="<?php echo ($iNews["news_id"]); ?>"  attr-message="删除">
                         <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
                       </a>
-
+                      <a target="_blank" href="index.php?c=detail&a=view&id=<?php echo ($iNews["news_id"]); ?>" class="sing_cursor glyphicon glyphicon-eye-open" aria-hidden="true"  ></a>
                     </td>
                   </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
