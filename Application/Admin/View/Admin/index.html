@@ -16,10 +16,10 @@
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="/admin.php?c=admin">用户管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=admin">用户管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-table"></i>{$nav}
+                        <i class="fa fa-table"></i>用户列表
                     </li>
                 </ol>
             </div>
@@ -46,26 +46,31 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <foreach name="users" item="user">
                             <tr>
-                                
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span  attr-status=""  attr-id="" class="sing_cursor singcms-on-off" id="singcms-on-off" ></span></td>
-                                <td>    <a href="javascript:void(0)" attr-id="" id="singcms-delete"  attr-a="admin" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
+                                <td>{$user.admin_id}</td>
+                                <td>{$user.username}</td>
+                                <td>{$user.realname}</td>
+                                <td>{$user.lastlogintime|date="Y-m-d H:i",###}</td>
+                                <td><span  attr-status="<if condition='$user.status eq 1'>0<else/>1</if>"  attr-id="{$user.admin_id}" class="sing_cursor singcms-on-off" id="singcms-on-off" >{$user.status|getMenuStatus}</span></td>
+                                <td>
+                                    <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true" id="singcms-edit" attr-id="{$user.admin_id}"></span>
+                                    <a href="javascript:void(0)" attr-id="{$user.admin_id}" id="singcms-delete"  attr-a="admin" attr-message="删除"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
+
                             </tr>
+                        </foreach>
                         </volist>
 
                         </tbody>
                     </table>
                     </form>
-                    
+
                 </div>
             </div>
 
         </div>
         <!-- /.row -->
+        {$pageRes}
     </div>
     <!-- /.container-fluid -->
 
@@ -77,10 +82,12 @@
 <!-- Morris Charts JavaScript -->
 <script>
     var SCOPE = {
-        'add_url' : '/admin.php?c=admin&a=add',
-        'edit_url' : '/admin.php?c=admin&a=edit',
-        'set_status_url' : '/admin.php?c=admin&a=setStatus',
+        'add_url' : 'admin.php?c=admin&a=add',
+        'edit_url' : 'admin.php?c=admin&a=edit',
+        'set_status_url' : 'admin.php?c=admin&a=setStatus',
         'index_url' : '/',
+        'delete_url' : 'admin.php?c=admin&a=delete',
+        'jump_url' : 'admin.php?c=admin',
 
     }
 </script>

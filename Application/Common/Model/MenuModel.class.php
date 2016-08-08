@@ -49,7 +49,7 @@ class MenuModel extends Model
     }
 
     /**
-     * 根据菜单Id从数据库取数据
+     * 根据菜单Id从数据库取一条数据
      * @param $id
      * @return mixed
      */

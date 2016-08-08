@@ -39,10 +39,11 @@
 
 
 <body>
+
 <div id="wrapper">
 
-  <?php
-$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; foreach($navs as $key=>$value){ if($value["c"] == "Admin" && $username != "admin"){ unset($navs[$key]); } } ?>
+    <?php
+$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -58,7 +59,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $username?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="admin.php?c=admin&a=edit"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -87,36 +88,46 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
 		<!-- Page Heading -->
 		<div class="row">
-    <div class="col-lg-12">
-        <a href="admin.php?c=basic"><button type="button" class="btn <?php if($type == 1): ?>btn-primary<?php endif; ?>"> 基本配置</button></a>
-        <a href="admin.php?c=basic&a=cache"><button type="button" class="btn <?php if($type == 2): ?>btn-primary<?php endif; ?>"> 缓存配置</button></a>
-    </div>
-</div>
+			<div class="col-lg-12">
+
+				<ol class="breadcrumb">
+					<li>
+						<i class="fa fa-dashboard"></i>  <a href="javascript:void(0)">个人中心</a>
+					</li>
+					<li class="active">
+						<i class="fa fa-edit"></i> 配置
+					</li>
+				</ol>
+			</div>
+		</div>
 		<!-- /.row -->
-		<br/><br/>
+
 		<div class="row">
 			<div class="col-lg-6">
 
 				<form class="form-horizontal" id="singcms-form">
 					<div class="form-group">
-						<label for="inputname" class="col-sm-2 control-label">站点标题:</label>
+						<label  class="col-sm-2 control-label">用户名:</label>
 						<div class="col-sm-5">
-							<input type="text" name="title" value="<?php echo ($message["title"]); ?>" class="form-control" id="inputname" placeholder="请填写站点标题">
+							
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">站点关键词:</label>
+						<label  class="col-sm-2 control-label">真实姓名:</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" value="<?php echo ($message["keywords"]); ?>" name="keywords" id="inputPassword3" placeholder="请填写站点关键词">
+							<input type="text" class="form-control" name="realname" id="inputPassword3" placeholder="" value="">
 						</div>
 					</div>
+
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">站点描述:</label>
+						<label  class="col-sm-2 control-label">个人邮箱:</label>
 						<div class="col-sm-5">
-							<textarea class="form-control" rows="3" name="description"><?php echo ($message["description"]); ?></textarea>
+							<input type="text" class="form-control" name="email" id="inputPassword3" placeholder="" value="">
 						</div>
 					</div>
+					<input type="hidden" name="admin_id" value=""/>
+
 
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
@@ -124,6 +135,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 						</div>
 					</div>
 				</form>
+
 
 			</div>
 
@@ -137,14 +149,15 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 <!-- /#page-wrapper -->
 
 </div>
-<!-- /#wrapper -->
 <script>
 	var SCOPE = {
-		'save_url' : 'admin.php?c=basic&a=add',
-		'jump_url' : 'admin.php?c=basic',
+		'save_url' : '/admin.php?c=admin&a=save',
+		'jump_url' : '',
+
 	};
 
 </script>
+<!-- /#wrapper -->
 <script src="Public/js/admin/common.js"></script>
 
 

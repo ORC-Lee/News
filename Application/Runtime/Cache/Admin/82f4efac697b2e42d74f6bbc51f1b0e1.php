@@ -44,7 +44,7 @@
 <div id="wrapper">
 
     <?php
-$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; ?>
+$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; foreach($navs as $key=>$value){ if($value["c"] == "admin" && $username != "admin"){ unset($navs[$key]); } } ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,7 +60,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $username?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=edit"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -94,10 +94,10 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=menu">菜单管理</a>
+                        <i class="fa fa-dashboard"></i>  <a href="admin.php?c=admin">用户管理</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-edit"></i> 菜单添加
+                        <i class="fa fa-edit"></i> 添加
                     </li>
                 </ol>
             </div>
@@ -109,54 +109,34 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 
                 <form class="form-horizontal" id="singcms-form">
                     <div class="form-group">
-                        <label for="inputname" class="col-sm-2 control-label">菜单名:</label>
+                        <label for="inputname" class="col-sm-2 control-label">用户名:</label>
                         <div class="col-sm-5">
-                            <input type="text" name="name" class="form-control" id="inputname" placeholder="请填写菜单名">
+                            <input type="text" name="username" class="form-control" id="inputname" placeholder="请填写用户名">
                         </div>
                     </div>
-                    <!--<div class="form-group">
-                        <label for="inputname" class="col-sm-2 control-label">父类菜单ID:</label>
-                        <div class="col-sm-5">
-                            <select class="form-control" name="parentid">
-                                <option value="0">一级菜单</option>
-                                <?php if(is_array($menus)): $i = 0; $__LIST__ = $menus;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$parent): $mod = ($i % 2 );++$i;?><option value="<?php echo ($parent["menu_id"]); ?>"><?php echo ($parent["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </select>
-                        </div>
-                    </div>-->
+                    
                     <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">菜单类型:</label>
+                        <label for="inputPassword3" class="col-sm-2 control-label">密码:</label>
                         <div class="col-sm-5">
-                            <input type="radio" name="type" id="optionsRadiosInline1" value="1" checked> 后台菜单
-                            <input type="radio" name="type" id="optionsRadiosInline2" value="0"> 前端栏目
+                            <input type="password" name="password" class="form-control" id="inputname" placeholder="请填写密码"/>
                         </div>
 
                     </div>
+
                     <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">模块名:</label>
+                        <label for="inputPassword3" class="col-sm-2 control-label">email:</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="m" id="inputPassword3" placeholder="模块名如admin">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">控制器:</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="c" id="inputPassword3" placeholder="控制器如index">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">方法:</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="f" id="inputPassword3" placeholder="方法名如index">
-                        </div>
-                    </div>
-                    <!--<div class="form-group">
-                        <label for="inputPassword3" class="col-sm-2 control-label">是否为前台菜单:</label>
-                        <div class="col-sm-5">
-                            <input type="radio" name="type" id="optionsRadiosInline1" value="0" checked> 否
-                            <input type="radio" name="type" id="optionsRadiosInline2" value="1"> 是
+                            <input type="text" name="email" class="form-control" id="inputname" placeholder="请填写email"/>
                         </div>
 
-                    </div>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">真实姓名:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="realname" id="inputPassword3" placeholder="请填写真实姓名">
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">状态:</label>
@@ -192,8 +172,8 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
 <script>
 
     var SCOPE = {
-        'save_url' : 'admin.php?c=menu&a=add',
-        'jump_url' : 'admin.php?c=menu',
+        'save_url' : 'admin.php?c=admin&a=add',
+        'jump_url' : 'admin.php?c=admin',
     }
 </script>
 <script src="Public/js/admin/common.js"></script>

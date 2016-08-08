@@ -12,6 +12,11 @@ class NewsContentModel extends Model
         $this->_db = M("news_content");
     }
 
+    /**
+     * 插入操作
+     * @param $data
+     * @return int|mixed
+     */
     public function insert($data){
         if (!$data || !is_array($data)){
             return 0;
@@ -23,6 +28,11 @@ class NewsContentModel extends Model
         return $this->_db->add($data);
     }
 
+    /**
+     *根据id从数据库中取一条数据
+     * @param int $id
+     * @return int|mixed
+     */
     public function find($id){
         if (!$id || !is_numeric($id)){
             return 0;
@@ -30,6 +40,12 @@ class NewsContentModel extends Model
         return $this->_db->where("news_id=".$id)->find();
     }
 
+    /**
+     * 根据id更新新闻内容
+     * @param $id
+     * @param $data
+     * @return bool
+     */
     public function updateNewsContentById($id, $data){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");
@@ -44,6 +60,11 @@ class NewsContentModel extends Model
         return $this->_db->where("news_id=".$id)->save($contentData);
     }
 
+    /**
+     * 根据id删除新闻内容
+     * @param $id
+     * @return mixed
+     */
     public function deleteNewsContentById($id){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");

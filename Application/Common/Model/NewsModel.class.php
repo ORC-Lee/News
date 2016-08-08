@@ -12,6 +12,11 @@ class NewsModel extends Model
         $this->_db = M("news");
     }
 
+    /**
+     * 插入操作
+     * @param $data
+     * @return int|mixed
+     */
     public function insert($data){
         if (!$data || !is_array($data)){
             return 0;
@@ -21,6 +26,13 @@ class NewsModel extends Model
         return $this->_db->add($data);
     }
 
+    /**
+     * 从数据库中取所有记录
+     * @param $page
+     * @param int $pageSize
+     * @param array $where
+     * @return mixed
+     */
     public function getNews($page, $pageSize = 10, $where = array()){
         $condition = $where;
         $offset = ($page - 1) * $pageSize;
@@ -33,6 +45,11 @@ class NewsModel extends Model
         return $this->_db->where($condition)->order("news_id desc")->limit($offset, $pageSize)->select();
     }
 
+    /**
+     * 从数据库去所有记录的数目
+     * @param array $where
+     * @return mixed
+     */
     public function getNewsCount($where = array()){
         $condition = $where;
         if (isset($where["title"]) && $where["title"]){
@@ -44,6 +61,11 @@ class NewsModel extends Model
         return $this->_db->where($condition)->count();
     }
 
+    /**
+     * 根据id去一条记录
+     * @param int $id
+     * @return int|mixed
+     */
     public function  find($id){
         if (!$id || !is_numeric($id)){
             return 0;
@@ -51,6 +73,12 @@ class NewsModel extends Model
         return $this->_db->where("news_id=".$id)->find();
     }
 
+    /**
+     * 根据id更新记录
+     * @param $id
+     * @param $data
+     * @return bool
+     */
     public function updateNewsById($id, $data){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");
@@ -61,6 +89,11 @@ class NewsModel extends Model
         return $this->_db->where("news_id=".$id)->save($data);
     }
 
+    /**
+     * 根据id删除记录
+     * @param $id
+     * @return mixed
+     */
     public function deleteNewsById($id){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");
@@ -78,6 +111,12 @@ class NewsModel extends Model
 //        return unlink("'". $thumb . "'");
 //    }
 
+    /**
+     * 根据id更改状态
+     * @param $id
+     * @param $status
+     * @return bool
+     */
     public function setStatusById($id, $status){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");
@@ -89,6 +128,11 @@ class NewsModel extends Model
         return $this->_db->where("news_id=".$id)->save($data);
     }
 
+    /**
+     * 根据id同时取多条记录
+     * @param $push
+     * @return mixed
+     */
     public function getNewsByNewsIdIn($push){
         if (!isset($push) || !is_array($push)){
             throw_exception("推送内容不合法");
@@ -106,6 +150,11 @@ class NewsModel extends Model
         return $this->_db->where("status=1")->order("count desc, news_id desc")->limit($limit)->select();
     }
 
+    /**
+     * 根据id更新新闻访问数
+     * @param $id
+     * @param $count
+     */
     public function updateCountById($id, $count){
         if (!$id || !is_numeric($id)){
             throw_exception("id不合法");
@@ -116,5 +165,13 @@ class NewsModel extends Model
 
         $data['count'] = $count;
         $this->_db->where("news_id=".$id)->save($data);
+    }
+
+    /**
+     * 取得最多阅读的文章
+     * @return mixed
+     */
+    public function newsMaxRead(){
+        return $this->_db->order("count desc")->find();
     }
 }

@@ -43,7 +43,7 @@
 <div id="wrapper">
 
     <?php
-$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; ?>
+$navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adminUser"]["username"]; foreach($navs as $key=>$value){ if($value["c"] == "Admin" && $username != "admin"){ unset($navs[$key]); } } ?>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,7 +59,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $username?> <b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li>
-          <a href="admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+          <a href="admin.php?c=admin&a=edit"><i class="fa fa-fw fa-user"></i> 个人中心</a>
         </li>
        
         <li class="divider"></li>
@@ -112,7 +112,7 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>今日登录用户数12</div>
+                                <div>今日登录用户数：<?php echo ($result["userCount"]); ?></div>
                             </div>
                         </div>
                     </div>
@@ -134,11 +134,11 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>文章数量12</div>
+                                <div>文章数量：<?php echo ($result["newsCount"]); ?></div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=content&a=index">
+                    <a href="admin.php?c=content&a=index">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -156,15 +156,15 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>文章最大阅读数12</div>
+                                <div>文章最大阅读数：<?php echo ($result["newsMaxRead"]["count"]); ?></div>
                             </div>
                         </div>
                     </div>
-                    <a target="_blank" href="">
+                    <a target="_blank" href="index.php?c=Detail&a=view&id=<?php echo ($result['newsMaxRead']['news_id']); ?>">
                         <div class="panel-footer">
                             <span class="pull-left"></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix">ssssssssssssssss</div>
+                            <div class="clearfix"><?php echo ($result["newsMaxRead"]["title"]); ?></div>
                         </div>
                     </a>
                 </div>
@@ -178,11 +178,11 @@ $navs = D("Menu")->getAdminMenus(); $index = "index"; $username = $_SESSION["adm
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>推荐位数</div>
+                                <div>推荐位数：<?php echo ($result["posCount"]); ?></div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=position">
+                    <a href="admin.php?c=position">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>今日登录用户数12</div>
+                                <div>今日登录用户数：{$result["userCount"]}</div>
                             </div>
                         </div>
                     </div>
@@ -56,11 +56,11 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>文章数量12</div>
+                                <div>文章数量：{$result["newsCount"]}</div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=content&a=index">
+                    <a href="admin.php?c=content&a=index">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -78,15 +78,15 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>文章最大阅读数12</div>
+                                <div>文章最大阅读数：{$result["newsMaxRead"]["count"]}</div>
                             </div>
                         </div>
                     </div>
-                    <a target="_blank" href="">
+                    <a target="_blank" href="index.php?c=Detail&a=view&id={$result['newsMaxRead']['news_id']}">
                         <div class="panel-footer">
                             <span class="pull-left"></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                            <div class="clearfix">ssssssssssssssss</div>
+                            <div class="clearfix">{$result["newsMaxRead"]["title"]}</div>
                         </div>
                     </a>
                 </div>
@@ -100,11 +100,11 @@
                             </div>
                             <div class="col-xs-9 text-right">
                                 <div class="huge"></div>
-                                <div>推荐位数</div>
+                                <div>推荐位数：{$result["posCount"]}</div>
                             </div>
                         </div>
                     </div>
-                    <a href="/admin.php?c=position">
+                    <a href="admin.php?c=position">
                         <div class="panel-footer">
                             <span class="pull-left">查看</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
